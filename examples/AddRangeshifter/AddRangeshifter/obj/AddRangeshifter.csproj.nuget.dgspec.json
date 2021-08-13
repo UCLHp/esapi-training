@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "M:\\ESAPI\\AddRangeshifter\\AddRangeshifter\\AddRangeshifter.csproj": {}
+    "M:\\ESAPI\\esapi-training\\examples\\AddRangeshifter\\AddRangeshifter\\AddRangeshifter.csproj": {}
   },
   "projects": {
-    "M:\\ESAPI\\AddRangeshifter\\AddRangeshifter\\AddRangeshifter.csproj": {
+    "M:\\ESAPI\\esapi-training\\examples\\AddRangeshifter\\AddRangeshifter\\AddRangeshifter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\ESAPI\\AddRangeshifter\\AddRangeshifter\\AddRangeshifter.csproj",
+        "projectUniqueName": "M:\\ESAPI\\esapi-training\\examples\\AddRangeshifter\\AddRangeshifter\\AddRangeshifter.csproj",
         "projectName": "AddRangeshifter",
-        "projectPath": "M:\\ESAPI\\AddRangeshifter\\AddRangeshifter\\AddRangeshifter.csproj",
+        "projectPath": "M:\\ESAPI\\esapi-training\\examples\\AddRangeshifter\\AddRangeshifter\\AddRangeshifter.csproj",
         "packagesPath": "C:\\Users\\SCOURT01.UCLH\\.nuget\\packages\\",
-        "outputPath": "M:\\ESAPI\\AddRangeshifter\\AddRangeshifter\\obj\\",
+        "outputPath": "M:\\ESAPI\\esapi-training\\examples\\AddRangeshifter\\AddRangeshifter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

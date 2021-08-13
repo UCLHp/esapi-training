@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "M:\\ESAPI\\QAFields\\QAFields\\QAFields.csproj": {}
+    "M:\\ESAPI\\esapi-training\\examples\\QAFields\\QAFields\\QAFields.csproj": {}
   },
   "projects": {
-    "M:\\ESAPI\\QAFields\\QAFields\\QAFields.csproj": {
+    "M:\\ESAPI\\esapi-training\\examples\\QAFields\\QAFields\\QAFields.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\ESAPI\\QAFields\\QAFields\\QAFields.csproj",
+        "projectUniqueName": "M:\\ESAPI\\esapi-training\\examples\\QAFields\\QAFields\\QAFields.csproj",
         "projectName": "QAFields",
-        "projectPath": "M:\\ESAPI\\QAFields\\QAFields\\QAFields.csproj",
+        "projectPath": "M:\\ESAPI\\esapi-training\\examples\\QAFields\\QAFields\\QAFields.csproj",
         "packagesPath": "C:\\Users\\SCOURT01.UCLH\\.nuget\\packages\\",
-        "outputPath": "M:\\ESAPI\\QAFields\\QAFields\\obj\\",
+        "outputPath": "M:\\ESAPI\\esapi-training\\examples\\QAFields\\QAFields\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

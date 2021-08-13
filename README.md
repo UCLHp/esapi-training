@@ -2,16 +2,19 @@
 NON-CLINICAL scripts. Purely for practice with ESAPI and C#.  
 
 
+
 ## Overview
-This repo hopefully contains useful information for you to get up and running with the Eclipse Scripting API (ESAPI), C# and Visual Studios.
+This repo hopefully contains useful information for you to get up and running with the Eclipse Scripting API (ESAPI), C# and Visual Studio.
 It also contains some sample scripts to show the range of functionality we might be able to benefit from. As of Eclipse v16.1 we have access to 
 write-enabled scripting for proton planning. Script-specific information and learning points can be found in the projects themselves.
 
 
-## Visual Studio
+
+## Visual Studio / C#
 You don't technically need to use this IDE, but everyone else does and it seems very nice. You can get the free Community edition [here](https://visualstudio.microsoft.com/free-developer-offers/).
 I've been using Visual Studio Community 2019 for this work. During installation you will be asked what "Workloads" you want - make sure to tick ".NET desktop development" and
 "Universal Windows Platform development". If you find that you don't have these, just open Visual Studio and go to Tools > Get Tools and Features... > Workloads to install them.
+
 
 
 ## Useful jargon
@@ -27,12 +30,32 @@ Advanced: In the above example we'd give the testing project access to the main 
 
 As an example, System is an in-built namespace available to us. Inside that namespace there is a Console class which gives us methods to say WriteLine() to the console. We could access this via `System.Console.WriteLine()` every time, or we could put `using System` right at the top of the code to make that namespace available to us, and then only have to type `Console.WriteLine()` each time.
 
-- **References**:
+- **References**: If you want to use classes and functions from another project (contained for example in an assembly) we have to manually add the reference to these in our current project.
+In Visual Studio this is done from the Solution Explorer tab: right-click on Dependencies and choose Add Reference. You can then select from the options listed, or Browse to the location of your reference.
+As an example, you'll see that all of the scripts I have put here contain `using VMS.TPS.Common.Model.API;` and `using VMS.TPS.Common.Model.Types;`. These are required for writing stand-alone scripts, with the
+API library essentially connecting Eclipse with C# and the Types library containing all the classes, data structures and functions available to us. You'll need to reference these manually - they can be found on the O: drive.
 
 
 
-## Some C# tips
+## Useful links
+There are quite a few places to look for code examples and help with ESAPI.
+- The Eclipse Scripting API Basics and Reference Guides give a decent overview and simple examples to test out
+- The ESAPI [reddit page](https://www.reddit.com/r/esapi/) helped me a lot
+- There are many [Varian webinars](https://www.myvarian.com/s/webinars)
+- [Carlos Anderson](http://www.carlosjanderson.com/)'s blog
+- [Rex Cardan](https://github.com/rexcardan?tab=repositories) who has done a lot of work on ESAPI
 
+
+
+
+##Instructions to run your first script
+1. Todo
+2.
+
+
+
+## Scripting tips
+Todo
 
 
 

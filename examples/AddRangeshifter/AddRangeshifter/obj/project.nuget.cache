@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QkugFQvVB1P5Z0y4CAhOqL+UI/Gxx2ERov0zUuYsOX4Dd2kAllEoNimsBGEDuoMlIFT0L0EFuMDM+UF57f3uQg==",
+  "dgSpecHash": "qZ/28pU1urTCm1nJXDKJlGLce7QYxrvF23PFLwlmGNpnSZv8V8GN/aZbI8bS7FQ4Q9miqvtLYnVT+rCe49sXIQ==",
   "success": true,
-  "projectFilePath": "M:\\ESAPI\\AddRangeshifter\\AddRangeshifter\\AddRangeshifter.csproj",
+  "projectFilePath": "M:\\ESAPI\\esapi-training\\examples\\AddRangeshifter\\AddRangeshifter\\AddRangeshifter.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

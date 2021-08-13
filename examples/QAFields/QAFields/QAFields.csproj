@@ -6,10 +6,10 @@
 
   <ItemGroup>
     <Reference Include="VMS.TPS.Common.Model.API">
-      <HintPath>..\..\ESAPI 16.1 Libraries\VMS.TPS.Common.Model.API.dll</HintPath>
+      <HintPath>..\..\..\..\ESAPI 16.1 Libraries\VMS.TPS.Common.Model.API.dll</HintPath>
     </Reference>
     <Reference Include="VMS.TPS.Common.Model.Types">
-      <HintPath>..\..\ESAPI 16.1 Libraries\VMS.TPS.Common.Model.Types.dll</HintPath>
+      <HintPath>..\..\..\..\ESAPI 16.1 Libraries\VMS.TPS.Common.Model.Types.dll</HintPath>
     </Reference>
   </ItemGroup>
 

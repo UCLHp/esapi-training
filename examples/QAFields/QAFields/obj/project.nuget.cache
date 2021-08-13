@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CSvhKg7FpuZR49QFIbfo81G78QUgUoUOfKZ+3Q7YA6U/ubHf3p0onKV3eQOIegTfQDaPLgQZeM5EzEw4UtiTxQ==",
+  "dgSpecHash": "YR0bkDTZaq5VR7NPI1UB5Lih6urxAsgMaHL1u+gxM1gRDAArHnEsMfr/Rhnubj0Lp4m2MygMZMCkECP0pT5Diw==",
   "success": true,
-  "projectFilePath": "M:\\ESAPI\\QAFields\\QAFields\\QAFields.csproj",
+  "projectFilePath": "M:\\ESAPI\\esapi-training\\examples\\QAFields\\QAFields\\QAFields.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
