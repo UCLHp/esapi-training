@@ -1,0 +1,4 @@
+M:\ESAPI\esapi-training\examples\BeamChecker\BeamChecker\BeamChecker\obj\Debug\netcoreapp3.1\BeamChecker.csproj.AssemblyReference.cache
+M:\ESAPI\esapi-training\examples\BeamChecker\BeamChecker\BeamChecker\obj\Debug\netcoreapp3.1\BeamChecker.AssemblyInfoInputs.cache
+M:\ESAPI\esapi-training\examples\BeamChecker\BeamChecker\BeamChecker\obj\Debug\netcoreapp3.1\BeamChecker.AssemblyInfo.cs
+M:\ESAPI\esapi-training\examples\BeamChecker\BeamChecker\BeamChecker\obj\Debug\netcoreapp3.1\BeamChecker.csproj.CoreCompileInputs.cache

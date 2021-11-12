@@ -42,7 +42,7 @@ namespace VMS.TPS
             // After calling BeginModifications successfully it is possible to modifiy patient data.
             patient.BeginModifications();
 
-
+            
             foreach (IonBeam ionBeam in context.IonPlanSetup.IonBeams)
             {
                 IonBeamParameters beamParams = ionBeam.GetEditableParameters();
