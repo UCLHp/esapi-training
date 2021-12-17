@@ -21,14 +21,37 @@ namespace VMS.TPS
         public Script()
         {
         }
+
+        public String AssessMuModulation(List<double> cpMUs, double energy)
+        {
+            // Method assesses modulation of spots in single layer; returns message
+
+            String message = "";
+
+            // Order spots by MUs lowest to highest
+            cpMUs.Sort();
+            double averageMU = cpMUs.Average();
+            //MessageBox.Show(String.Join("\n",cpSpotMUs));
+
+            if (cpMUs.Last() > 100 && cpMUs.Last() > 4*averageMU)
+            {
+                //MessageBox.Show("Warning: Hot spot in beam "+beamID+" at E = "+energy);
+                message = "\n\tE = " + energy;
+            }
+            return message;
+        }
+
+
         public void Execute(ScriptContext context)  
         {
+
+            String results = "Beam Checker Results";
 
             Patient patient = context.Patient;
             foreach (IonBeam beam in context.IonPlanSetup.IonBeams)
             {
 
-                String BEAM_MESSAGE = "";
+                //String BEAM_MESSAGE = "";
 
                 var beamID = beam.Id;
                 //string beamName = beam.Name;
@@ -49,6 +72,7 @@ namespace VMS.TPS
                                 "\nMax beam spot MU = " + System.Math.Round(maxBeamSpotMU,2)
                                 );
 
+                results += "\n Potential hot spots in beam " + beamID + " at";
                 
                 foreach( IonControlPoint cp in beam.IonControlPoints)
                 {             
@@ -77,34 +101,22 @@ namespace VMS.TPS
                             cpSpotMUs.Add(mu);
                         }
 
-                        // Order spots by MUs lowest to highest
-                        cpSpotMUs.Sort();
-                        //MessageBox.Show(String.Join("\n",cpSpotMUs));
-
-                        // Warn if there's a single spot 100% hotter than 2nd hottest
-                        //MessageBox.Show(cpSpotWeights.Last() + "  " + 1 * cpSpotWeights[cpSpotWeights.Count - 2]);
-                        //if ( cpSpotWeights.Last() > 2*cpSpotWeights[ cpSpotWeights.Count-2 ] )
-                        if (cpSpotMUs.Last()>100  && cpSpotMUs.Last()>4*avg_CP_MU)
-                        {
-                            //MessageBox.Show("Warning: Hot spot in beam "+beamID+" at E = "+energy);
-                            BEAM_MESSAGE += "\nWarning: Hot spot in beam " + beamID + " at E = " + energy;
-                       }
+                        results += AssessMuModulation(cpSpotMUs, energy);
 
                     }
 
                 }
+                results += "\n";
 
 
-                if( BEAM_MESSAGE != "")
-                {
-                    MessageBox.Show(BEAM_MESSAGE);
-                }
-
-
-
+                //if( BEAM_MESSAGE != "")
+                //{
+                //    MessageBox.Show(BEAM_MESSAGE);
+                //}
 
             }
 
+            MessageBox.Show(results);
 
         }
     }
