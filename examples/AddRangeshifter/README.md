@@ -4,3 +4,4 @@ A script to allow the user to select a rangeshifter from a drop-down list and th
 
 
 ## Learning points
+- Not yet possible to remove a rangeshifter from a beam

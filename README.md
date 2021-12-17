@@ -46,7 +46,6 @@ There are quite a few places to look for code examples and help with ESAPI.
 - There are many [Varian webinars](https://www.myvarian.com/s/webinars)
 - The ESAPI [reddit page](https://www.reddit.com/r/esapi/) helped me a lot
 - [Carlos Anderson's](http://www.carlosjanderson.com/) blog, who developed the [ESAPI Essentials Toolkit](https://www.carlosjanderson.com/introducing-esapi-essentials/) available via NuGet 
-- [João Castelo](João Castelo)'s blog
 - [Rex Cardan](https://github.com/rexcardan) who has done a lot of work on ESAPI, developing the open-source ESAPIX extension library (available via NuGet) as well as the Evil-DICOM library.
 - WUSTL [code samples](https://github.com/wustl-ClinicalDev)  
 

@@ -12,9 +12,9 @@ using System.Threading.Tasks;
 
 
 /* Script to add a rangeshifter to all beams in a plan.
- * 
- * (Eclipse loses the beam line and thus rangeshifters after various edits to 
- * a field, such as changing the STV volume / margins etc)
+ *
+ * Seems that removing a rangeshifter is not possible via ESAPI; user gets
+ * warning message if one is already present.
  */
 
 [assembly: ESAPIScript(IsWriteable = true)]
@@ -27,39 +27,54 @@ namespace VMS.TPS
         {
         }
 
-        public void Execute(ScriptContext context) 
+        public void Execute(ScriptContext context)
         {
-            // Hard code supported rangeshifter names
-            List<string> availableRangeshifters = new List<string>() { "RS = 5 cm", "RS = 3 cm", "RS = 2 cm" };
+            // Hard code supported rangeshifter names for clinical beam model
+            List<string> availableRangeshifters = new List<string>() { "RS=5cm", "RS=3cm", "RS=2cm" };
 
-            // Simple GUI to select desired rangeshifter
+            // GUI to select desired rangeshifter
             var selectedRangeshifter = SelectRangeshifterWindow.SelectRangeshifter(availableRangeshifters);
 
             Patient patient = context.Patient;
-
             // BeginModifications will throw an exception if the system is not configured for research
             // use or system is a clinical system and the script is not approved.
-            // After calling BeginModifications successfully it is possible to modifiy patient data.
             patient.BeginModifications();
 
-            
+
+            bool rsPresent = false;
             foreach (IonBeam ionBeam in context.IonPlanSetup.IonBeams)
             {
                 IonBeamParameters beamParams = ionBeam.GetEditableParameters();
-                
-                beamParams.PreSelectedRangeShifter1Id = selectedRangeshifter;
-                beamParams.PreSelectedRangeShifter1Setting = "IN";
+                // Check no rangeshifter present and add
+                string rangeShifterId = beamParams.PreSelectedRangeShifter1Id;
+                if (rangeShifterId == null)
+                {
+                    beamParams.PreSelectedRangeShifter1Id = selectedRangeshifter;
+                    beamParams.PreSelectedRangeShifter1Setting = "IN";
 
-                // Apply changes to Eclipse; without this nothing will happen
-                ionBeam.ApplyParameters(beamParams);
+                    // Apply changes to Eclipse; without this nothing will happen
+                    ionBeam.ApplyParameters(beamParams);
+                }
+                else
+                {
+                    rsPresent = true;
+                    //Does not seem possible to remove a rangeshifter
+                }
             }
+
+            if (rsPresent)
+            {
+                MessageBox.Show("Rangeshifter already present, no changes made");
+            }
+
+
         }
     }
 
 
 
     /*
-     * To get this "Window" GUI to work I had to add two lines to the project file:
+     * To add the reference for this I had to add two lines to the project file:
      *    <UseWPF>true</UseWPF>
      *    <UseWindowsForms>true</UseWindowsForms>
      * as explained here: https://stackoverflow.com/a/58129582/8709538
@@ -86,7 +101,7 @@ namespace VMS.TPS
 
             var text = new TextBlock();
             text.Text = "     Select rangeshifter:";
-            text.Margin = new Thickness(10,8,10,10);
+            text.Margin = new Thickness(10, 8, 10, 10);
             text.FontSize = 12;
             grid.Children.Add(text);
 
