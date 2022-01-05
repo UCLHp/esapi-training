@@ -4,3 +4,4 @@ Testing the functionality to automate volume generation. This script will take a
 
 
 ## Learning points
+- Bit of a hack fix required when High Resolution structures are present. Certain volume operations will not work if using a mixture of low and high resolution structures, and so we must convert them all to low (or high?). There seems to be an in-built method to convert low to high resolution, but I couldn't make it work. There is no in-built reverse operation.
